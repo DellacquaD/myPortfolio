@@ -8,7 +8,7 @@ import './Works.css';
 
 // Import ../../assets/recentprojects/
 import Portfolio from '../../assets/recentprojects/project1.png';
-import DigitalBooking from '../../assets/recentprojects/DigitalBooking.png';
+import DigitalBooking from '../../assets/recentprojects/digitalBooking.png';
 
 export const Works = () => {
   const [projects, setProjects] = useState([
