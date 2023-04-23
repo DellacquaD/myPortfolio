@@ -1,0 +1,42 @@
+{
+  "name": "myportfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.126",
+    "@mui/material": "^5.12.0",
+    "@react-three/drei": "^9.65.3",
+    "@react-three/fiber": "^8.12.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "classnames": "^2.3.2",
+    "ios-inner-height": "^1.1.1",
+    "meshline": "^3.1.6",
+    "popmotion": "^11.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.10.0",
+    "react-transition-group": "^4.4.5",
+    "sweetalert2": "^11.7.3",
+    "three": "^0.151.3",
+    "use-dencrypt-effect": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.2.0"
+  }
+}

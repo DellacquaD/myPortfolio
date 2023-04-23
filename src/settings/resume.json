@@ -1,0 +1,119 @@
+{
+    "basics": {
+        "name": "Damian Dell'Acqua",
+        "label": "Web Developer & Design",
+        "email": "d.dellacquaruiz@gmail.com",
+        "phone": "(+598) 94-138-215",
+        "picture": "dd.png",
+        "job1": "Web Developer",
+        "job2": "Design",
+        "description": "Hello! I'm Damian! bla bla bla",
+        "summary": "based in Montevideo, Uruguay",
+        "keywords": "personal,website,portfolio,template,kit,damian,dellacqua,ddellacqua,webdev,web,developer,montevideo,uruguay,react,github,linkedin,google,gitlab,telegram,material,design,ux,ui,webapp",
+        "url": "https://ddellacqua.vercel.app/",
+        "location": {
+            "address": "Luis Batlle Berres 6000",
+            "postalCode": "12600",
+            "city": "Montevideo",
+            "country": "Uruguay",
+            "countryCode": "+598",
+            "region": "Montevideo"
+        },
+        "profiles": [
+            {
+                "network": "Google",
+                "username": "d.dellacquaruiz@gmail.com",
+                "url": "mailto:d.dellacquaruiz@gmail.com",
+                "x_icon": "fab fa-google"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "Damian Dell'Acqua",
+                "url": "https://www.linkedin.com/in/dami%C3%A1n-dell-acqua-274b29107/",
+                "x_icon": "fab fa-linkedin-in"
+            },
+            {
+                "network": "GitHub",
+                "username": "DellacquaD",
+                "url": "https://github.com/DellacquaD",
+                "x_icon": "fab fa-github"
+            },
+            {
+                "network": "Discord",
+                "username": "ddellacqua#1258",
+                "url": "https://discord.com",
+                "x_icon": "fab fa-discord"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "MercadoLibre",
+            "position": "Customer service rep",
+            "website": "https://www.mercadolibre.com.uy/",
+            "startDate": "2019-12-02",
+            "endDate": "",
+            "summary": "Description...",
+            "highlights": [""]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Observatorio Geofisico del Uruguay (OGU)",
+            "position": "Volunteer",
+            "website": "http://ogu.fcien.edu.uy/es_ES/",
+            "startDate": "2017-04-10",
+            "endDate": "",
+            "summary": "Description...",
+            "highlights": ["Awarded 'Volunteer of the Month'"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Digital House",
+            "area": "Software Development",
+            "studyType": "technique",
+            "startDate": "2022-05-10",
+            "endDate": "",
+            "gpa": "4.0",
+            "courses": [""]
+        }
+    ],
+    "awards": [
+    ],
+    "publications": [
+    ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "technique",
+            "keywords": ["HTML", "CSS", "Javascript", "react", "java", "SQL", "SCRUM"]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Spanish",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "English",
+            "fluency": "Good knowledge"
+        },
+        {
+            "language": "Portuguese",
+            "fluency": "Good knowledge"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Research",
+            "keywords": []
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference..."
+        }
+    ]
+}
