@@ -33,9 +33,9 @@ window.addEventListener("resize", resize);
 
 // Textures
 const textureLoader = new THREE.TextureLoader();
-const map = textureLoader.load('./bricks/earthColors.jpg');
-const moonMap = textureLoader.load('./bricks/moonTexture.jpg');
-const worldTexture = textureLoader.load('./bricks/stars.jpg');
+const map = textureLoader.load('/bricks/earthColors.jpg');
+const moonMap = textureLoader.load('/bricks/moonTexture.jpg');
+const worldTexture = textureLoader.load('/bricks/stars.jpg');
 
 const worldGeometry = new THREE.SphereGeometry( 200, 31 , 31 );
 const worldMaterial = new THREE.MeshBasicMaterial ({
@@ -94,7 +94,7 @@ const animate = () => {
 };
 animate();
 
-renderer.render(scene,camera);
+// renderer.render(scene,camera);
 
     // agrega el canvas
 export const mountScene = (mountRef) => {

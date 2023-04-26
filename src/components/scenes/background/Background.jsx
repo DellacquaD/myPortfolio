@@ -1,31 +1,31 @@
-import React from 'react'
-import { useRef, useEffect } from 'react'
-import { mountScene, cleanUpScene } from './Script'
+import React, { useState, useRef, useEffect } from 'react';
+import LoadSpinner from '../../loadSpinner/LoadSpinner';
+import { mountScene, cleanUpScene } from './Script';
 
-const Background = () => {
-    const mountRef = useRef(null)
+const Background = ({ isLoaded }) => {
+  const mountRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(null);
 
-    useEffect(() => {
-        mountScene(mountRef)
-        //Clean up scene
-        return () => {
-            cleanUpScene()
-        }
-    }, [])
+  useEffect(() => {
+    console.log('entre en este if');
+    if (isLoaded && mountRef.current && isMounted === null) {
+      setIsMounted(true);
+      mountScene(mountRef);
+    }
 
+    return () => {
+      console.log('entre en el otro if');
+      if (isMounted) {
+        cleanUpScene();
+      }
+    }
+  }, [isLoaded, mountRef, isMounted]);
 
   return (
-    <div 
-        className="contenedor3D"
-        ref={mountRef}
-        style={{
-        width: '100vw', 
-        height: '100vh',
-        position: 'fixed'
-      }}
-    >        
-    </div>
-  )
-}
+    <>
+      {!isLoaded ? <LoadSpinner /> : <div ref={mountRef} style={{ width: '100vw', height: '100vh', position: 'fixed' }}></div> }
+    </>
+  );
+};
 
-export default Background
+export default Background;

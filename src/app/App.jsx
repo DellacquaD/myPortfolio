@@ -2,8 +2,7 @@ import React, { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import "../index.css";
 import { logCredits } from "../utils/logCredits";
-
-import { Home } from "../pages/Home";
+import Home from "../pages/Home";
 
 // const Resume = lazy(() => import("../pages/Resume"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound"));
