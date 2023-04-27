@@ -1,0 +1,27 @@
+.logoPlacement {
+    position: 'fixed';
+    top: 20px;
+    left: 20px
+}
+
+@media (max-width: 768px) {
+    .logo{
+        transform: scale(0.8);
+    }
+
+    .logoPlacement {
+        left: 15px;
+        left: 15px
+    }
+}
+
+@media (max-width: 550px) {
+    .logo {
+        transform: scale(0.6);
+    }
+
+    .logoPlacement {
+        left: 10px;
+        left: 10px
+    }
+}

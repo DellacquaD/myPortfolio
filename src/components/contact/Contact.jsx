@@ -76,7 +76,7 @@ export const Contact = () => {
                 />
                 <button type="submit" value="Send" className="submit-btn">
                 <i className="fas fa-terminal"></i>
-                  <Typography component='span'> Send Message</Typography>
+                <Typography component='span'> Send Message</Typography>
                 </button>
               </form>
             </div>

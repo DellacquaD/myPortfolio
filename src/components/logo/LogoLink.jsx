@@ -2,6 +2,8 @@ import React from "react";
 import { Link, Tooltip, Zoom } from "@mui/material";
 import Resume from "../../settings/resume.json";
 import { Logo } from "./Logo";
+import './Logo.css'
+
 
 export const LogoLink = () => {
 
@@ -10,10 +12,9 @@ export const LogoLink = () => {
       title={Resume.basics.name}
       placement="right"
       TransitionComponent={Zoom}
+      className="logoPlacement"
       sx={{
-            position: 'fixed',
-            top: '20px',
-            left: '20px'
+          position: 'fixed',
           }}
     >
       <Link

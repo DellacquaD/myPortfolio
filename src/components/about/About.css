@@ -1,14 +1,14 @@
 .about {
   display: grid;
   gap: 30px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.2fr 1.4fr;
 }
 .heading {
   width: 30%;
   font-size: 1.15rem;
 }
 ._img {
-  width: 550px;
+  width: 100%;
   height: 35em;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -38,38 +38,23 @@
 }
 
 .contact-btn {
-  margin-right: 20px;
   text-decoration: none;
   color: #ec704c;
 }
 .contact-btn:hover {
-  margin-right: 20px;
   text-decoration: none;
   background-color: #ec704c;
+  color: #fff;
+
 }
 @media (max-width: 1024px) {
   .about {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-  ._img {
-    margin: 2em;
+    grid-template-columns: 1fr;
   }
   ._content_wrapper {
-    width: 40%;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .about {
-    margin-left: 4em;
-    margin-right: 4em;
-    flex-direction: column;
-  }
-  ._img {
-    width: 15em;
-    height: 12em;
-  }
-  ._content_wrapper {
-    width: 15em;
-  }
+
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import './Logo.css'
+
 export const Logo = () => {
 
     return (
@@ -8,6 +10,7 @@ export const Logo = () => {
         viewBox="0 0 160.52 113.578"
         xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
+        className="logo"
       >
         <path
           style={{

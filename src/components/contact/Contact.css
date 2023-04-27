@@ -58,29 +58,18 @@
 }
 
 @media (max-width: 1024px) {
-  ._form_wrapper {
-    width: 300px;
-    height: auto;
-    margin-left: 4em;
-    margin-right: 4em;
-    padding: 2em;
-  }
+
 }
 @media (max-width: 768px) {
   .contact {
-    width: 70%;
-    margin-left: 5rem;
-    margin-right: 4rem;
     margin-bottom: 7em;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   ._form_wrapper {
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 2em;
+    grid-row: 2;
   }
-  .contact {
-    flex-direction: column;
+  .contact_msg {
+    font-size: 50px;
   }
 }

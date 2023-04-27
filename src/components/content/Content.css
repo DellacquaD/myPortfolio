@@ -1,0 +1,45 @@
+.__contentName > p {
+    font-size: 30px;
+    line-height: 1.334;
+    letter-spacing: 0em;
+    color: #fff;
+    text-shadow: '0 5px 10px rgba(0, 0, 0, 0.9)';
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+}
+.__contentBanner > p {
+    margin: 0;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    font-size: 85px;
+    line-height: 1.167;
+    letter-spacing: -0.01562em;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 768px) {
+    .__contentName > p{
+        font-size: 25px;
+    }
+    .__contentBanner > p {
+        font-size: 70px;
+
+    }
+
+}
+
+@media (max-width: 550px) {
+    .__contentName > p{
+        font-size: 20px;
+    }
+    .__contentBanner > p {
+        font-size: 55px;
+
+    }
+
+}
