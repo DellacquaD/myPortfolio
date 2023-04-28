@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@mui/lab";
 import Resume from "../../settings/resume.json";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGoogle, faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
+library.add(faGoogle, faLinkedin, faGithub, faDiscord);
+
 export const SpeedDials = () => {
 
   const [open, setOpen] = useState(false);
@@ -17,7 +22,7 @@ export const SpeedDials = () => {
   const actionIcons = Resume.basics.profiles.map((action) => (
     <SpeedDialAction
       key={action.network.toLowerCase()}
-      icon={<i className={`${action.x_icon}`}></i>}
+      icon={<FontAwesomeIcon icon={`${action.x_icon}`} />}
       tooltipTitle={action.network}
       onClick={handleClose}
       href={action.url}

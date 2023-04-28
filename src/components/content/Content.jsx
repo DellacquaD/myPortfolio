@@ -7,8 +7,8 @@ import './Content.css'
 export const Content = () => {
 
   return (
-    <Container component="" className='' maxWidth="md" sx={{ position: "relative", minHeight: '100vh' }}>
-      <div className='' style={{ position: "relative", top: '200px' }}>
+    <Container component="" className='' maxWidth="md" sx={{ position: "relative", minHeight: '100vh', display: 'grid', placeContent: 'center' }}>
+      <div >
         <Typography component="h2" className="__contentName">
             <TextDecrypt text={`${FirstName} ${LastName}`}/>
         </Typography>

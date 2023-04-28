@@ -38,16 +38,16 @@ export const Home = () => {
       <Background isLoaded={isBackgroundLoaded} />
       <LogoLink />
       <Provider>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </Provider>
       <Hidden smDown>
-        <SocialIcons />
+        <SocialIcons /> 
       </Hidden>
-      <Hidden mdUp>
+      <Hidden smUp>
         <SpeedDials />
       </Hidden>
-      <Resume />
       <SideNavbar />
+      {/* <Resume /> */}
       <div
         className="contentContainer"
         style={{

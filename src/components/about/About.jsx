@@ -20,7 +20,7 @@ export const About = () => {
             style={{ 
               background: "url(" + profile + ")",
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'top',
               backgroundRepeat: 'no-repeat',
               placeSelf: 'self-start'
             }}
