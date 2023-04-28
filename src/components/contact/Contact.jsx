@@ -1,24 +1,56 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import { Container, Typography, TextField, Button } from "@mui/material";
 import { TextDecrypt } from "../content/TextDecrypt";
-import Swal from 'sweetalert2';
-
-import emailjs from '@emailjs/browser';
-
 import './Contact.css';
-
-
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
 
   const greetings = "¡Say hello!";
 
   const form = useRef();
+  
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Validación personalizada
+    const name = form.current.name.value;
+    const email = form.current.email.value;
+    const message = form.current.message.value;
+    let hasErrors = false;
+
+    // Validación del nombre
+    if (name.length < 3) {
+      setNameError(true);
+      hasErrors = true;
+    } else {
+      setNameError(false);
+    }
+
+    // Validación del correo electrónico
+    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      setEmailError(true);
+      hasErrors = true;
+    } else {
+      setEmailError(false);
+    }
+
+    if (!name || !email || !message) {
+      setMessageError(true);
+      hasErrors = true;
+    } else {
+      setMessageError(false);
+    }
+
+    if (hasErrors) {
+      return;
+    }
 
     emailjs.sendForm('service_bsgy5d6', 'template_87w2jpl', form.current, 'oVliWmbJ9Pl2XqDD0')
       .then((result) => {
@@ -27,18 +59,9 @@ export const Contact = () => {
       }, (error) => {
           console.log(error.text);
       });
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'You have sent an email!',
-      showConfirmButton: false,
-      timer: 1500
-    })
-    e.target.reset()
+    e.target.reset();
   };
-
-
-
+  
     return (
       <section id="contact" style={{ position: 'relative' }}>
         <Container component="main" className='' maxWidth="md" >
@@ -53,6 +76,9 @@ export const Contact = () => {
                   variant="filled"
                   name="name"
                   className='fieldBackground'
+                  required
+                  error={nameError}
+                  onChange={() => setNameError(false)}
                 />
                 <TextField
                   id="outlined-password-input"
@@ -62,6 +88,9 @@ export const Contact = () => {
                   variant="filled"
                   name="email"
                   className='fieldBackground'
+                  required
+                  error={emailError}
+                  onChange={() => setEmailError(false)}
                 />
                 <TextField
                   id="outlined-password-input"
@@ -73,6 +102,9 @@ export const Contact = () => {
                   variant="filled"
                   name="message"
                   className='fieldBackground'
+                  required
+                  error={messageError}
+                  onChange={() => setMessageError(false)}
                 />
                 <button type="submit" value="Send" className="submit-btn">
                 <i className="fas fa-terminal"></i>

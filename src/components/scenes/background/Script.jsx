@@ -35,16 +35,20 @@ window.addEventListener("resize", resize);
 const textureLoader = new THREE.TextureLoader();
 const map = textureLoader.load('/bricks/earthColors.jpg');
 const moonMap = textureLoader.load('/bricks/moonTexture.jpg');
-const worldTexture = textureLoader.load('/bricks/stars.jpg');
+const starsTexture = textureLoader.load('/bricks/stars.jpg');
+starsTexture.wrapS = starsTexture.wrapT = THREE.RepeatWrapping;
+starsTexture.repeat.set(2, 2);
+starsTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
 const worldGeometry = new THREE.SphereGeometry( 200, 31 , 31 );
 const worldMaterial = new THREE.MeshBasicMaterial ({
     color: 0xffffff ,
-    map: worldTexture ,
+    map: starsTexture ,
     side: THREE.BackSide
 });
-const world = new THREE.Mesh( worldGeometry, worldMaterial );
-scene.add( world );
+
+const world = new THREE.Mesh(worldGeometry, worldMaterial);
+scene.add(world);
 
 // Earth
 const geometry = new THREE.SphereGeometry( 36, 40, 40);
@@ -91,6 +95,8 @@ const animate = () => {
     sphere.rotateOnAxis(new THREE.Vector3(0,1,0),0.002);
     MoonSphere.rotateY(0.009);
     moonOrbitCenter.rotateY(-0.0015);
+    starsTexture.offset.x -= 0.0001;
+    starsTexture.offset.y -= 0.0001;
 };
 animate();
 
@@ -111,7 +117,7 @@ export const cleanUpScene = () => {
 
     // Llamar a la función dispose en cada objeto
     worldMaterial.dispose();
-    worldTexture.dispose();
+    starsTexture.dispose();
     material.dispose();
     map.dispose();
     MoonMaterial.dispose();
